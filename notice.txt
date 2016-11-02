@@ -1,0 +1,13 @@
+﻿百度的一款富文本编辑器UEditor
+
+可以自定义各种工具，这个Demo删除了源码的一些功能，保留了常用的一些
+
+1.具体的创建editor在index.jsp
+
+2.要修改功能，则需要在ueditor.config.js中的toolbars:配置，删除功能的同时也应该要删除此功能对应的dialogs文件夹中的一些配置文件(Demo中已经删除)
+
+3.如果要实现图片上传功能，则需要导入五个jar,并且在jsp文件家中的config.json文件中配置：其中的imagePathFormat表示图片上传的路径，imageUrlPrefix则是图片显示的路径，注意ueditor1_4_3_2版本中imageUrlPrefix是接在imagePathFormat前面的路径，连个路径拼凑起来才是真正的图片路径
+
+4.jsp中接收数据的showContent.jsp中可以通过URL的?editorValue= ..... 直接获取参数，然后打印,官网是说要通过uparse方法实现。why???
+
+官网：http://ueditor.baidu.com/website/
